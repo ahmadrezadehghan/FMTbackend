@@ -1,0 +1,65 @@
+http://193.163.201.115:8000/api/auth/register
+
+{
+  "name":     "Test User1",
+  "email":    "test1@example.com",
+  "password": "secret123",
+  "password_confirmation": "secret123"
+}
+
+out:
+{"user":{"name":"Test User1","email":"test1@example.com","updated_at":"2025-04-20T12:37:21.000000Z","created_at":"2025-04-20T12:37:21.000000Z","id":2}}
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+http://193.163.201.115:8000/api/auth/login
+
+{
+  "email":    "sardsid@gmail.com",
+  "password":"sardccccGGG4V8h38f9DS8sid@mHaHn66ager.5L6K4j2dKkd25646@return"
+}
+
+output:
+{
+    "token": "1|Ji1FEthdzCgz6OM4EQ6CMUv4sMo9bEGXiaYYgAgJfa6d735c",
+    "user": {
+        "id": 2,
+        "name": "manager",
+        "email": "sardsid@gmail.com",
+        "role": "manager"
+    }
+}
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+http://193.163.201.115:8000/api/admin/users
+//use token on login
+//only works for admin and manager role
+out:
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 1,
+            "name": "Test User1",
+            "email": "test1@example.com",
+            "email_verified_at": null,
+            "role": "user",
+            "created_at": "2025-04-20T14:45:16.000000Z",
+            "updated_at": "2025-04-20T14:45:16.000000Z",
+            "wallets": [],
+            "trades": [],
+            "ib": null,
+            "personal_cabin": null,
+            "demo_accounts": [],
+            "copy_trades_as_follower": [],
+            "copy_trades_as_provider": [],
+            "kyc_documents": [],
+            "bank_accounts": [],
+            "trading_accounts": [],
+            "notifications": []
+        },
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
