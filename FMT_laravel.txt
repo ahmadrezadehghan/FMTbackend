@@ -1,0 +1,107 @@
+so what i did  :
+i did write the exact models in the app/Models and put the codes you wrote in them:
+ComplianceLog.php
+CopyTrade.php
+DemoAccount.php
+ForexPair.php
+IB.php
+MarketData.php
+Order.php
+PersonalCabin.php
+RiskLog.php
+Trade.php
+Transaction.php
+User.php
+Wallet.php
+
+
+i did write the exact controllers in the app/Http/Controllers and put the codes you wrote in them:
+AuthController.php
+BonityController.php
+ForexController.php
+IBController.php
+PersonalCabinController.php
+ProfileController.php
+TradeController.php
+TransactionController.php
+UserController.php
+WalletController.php
+
+I put all migration tables into the migrations:
+2025_04_19_134955_create_compliance_logs_table.php
+2025_04_19_134955_create_copy_trades_table.php
+2025_04_19_134955_create_demo_accounts_table.php
+2025_04_19_134955_create_market_data_table.php
+2025_04_19_134955_create_orders_table.php
+2025_04_19_134955_create_personal_cabins_table.php
+2025_04_19_134955_create_risk_logs_table.php
+2025_04_19_134958_create_ibs_table.php
+2025_04_19_134958_create_trades_table.php
+2025_04_19_134959_create_forex_pairs_table.php
+2025_04_19_134959_create_transactions_table.php
+2025_04_19_134959_create_wallets_table.php
+2025_04_19_135607_create_users_table.php
+
+and I set the api routes:
+<?php
+// routes/api.php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PersonalCabinController;
+use App\Http\Controllers\WalletController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\TradeController;
+use App\Http\Controllers\ForexController;
+use App\Http\Controllers\IBController;
+use App\Http\Controllers\BonityController;
+
+// Public routes
+Route::post('auth/register', [AuthController::class, 'register']);
+Route::post('auth/login',    [AuthController::class, 'login']);
+
+// Routes protected by auth middleware
+Route::middleware('auth:api')->group(function () {
+    // Authentication
+    Route::post('auth/logout',  [AuthController::class, 'logout']);
+    Route::post('auth/refresh', [AuthController::class, 'refresh']);
+
+    // Users
+    Route::apiResource('users', UserController::class)->except(['create','edit']);
+
+    // Profile (Personal Cabin settings)
+    Route::get('profile',       [ProfileController::class, 'show']);
+    Route::put('profile',       [ProfileController::class, 'update']);
+
+    // Personal Cabin Dashboard
+    Route::get('cabin/dashboard', [PersonalCabinController::class, 'dashboard']);
+    Route::put('cabin',           [PersonalCabinController::class, 'update']);
+
+    // Wallets & Transactions
+    Route::apiResource('wallets', WalletController::class)->except(['create','edit']);
+    Route::apiResource('transactions', TransactionController::class)
+         ->only(['index','show','store']);
+
+    // Trades
+    Route::apiResource('trades', TradeController::class)->except(['create','edit']);
+
+    // Forex data
+    Route::get('forex/pairs',         [ForexController::class, 'pairs']);
+    Route::get('forex/quote/{symbol}',[ForexController::class, 'quote']);
+
+    // Introducing Broker (IB)
+    Route::get('ib/{userId}',    [IBController::class, 'show']);
+    Route::put('ib/{userId}',    [IBController::class, 'update']);
+
+    // Credit/Bonnity calculations
+    Route::get('bonity/{userId}', [BonityController::class, 'calculate']);
+});
+
+// Fallback route for unauthenticated access or undefined endpoints
+Route::fallback(function(){
+    return response()->json(['message' => 'Not Found'], 404);
+});
+

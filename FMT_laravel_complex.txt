@@ -1,0 +1,528 @@
+so what i did  :
+i did write the exact models in the app/Models and put the codes you wrote in them:
+ComplianceLog.php
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class ComplianceLog extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'action',
+        'status',
+        'remarks',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+CopyTrade.php
+
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class CopyTrade extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'provider_id',
+        'follower_id',
+        'copying_mode',
+        'fee_percentage',
+        'status',
+    ];
+
+    public function provider()
+    {
+        return $this->belongsTo(User::class, 'provider_id');
+    }
+
+    public function follower()
+    {
+        return $this->belongsTo(User::class, 'follower_id');
+    }
+}
+
+
+DemoAccount.php
+
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class DemoAccount extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'balance',
+        'currency',
+        'simulation_data',
+        'status',
+    ];
+
+    protected $casts = [
+        'simulation_data' => 'array',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+
+ForexPair.php
+
+<?php
+
+namespace App\Models;
+
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class ForexPair extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'symbol',
+        'base_currency',
+        'quote_currency',
+        'pip_value',
+        'min_trade_volume',
+        'max_trade_volume',
+    ];
+
+    public function trades()
+    {
+        return $this->hasMany(Trade::class);
+    }
+}
+
+
+
+IB.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class IB extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'commission_rate',
+        'referral_code',
+        'total_referred',
+        'earnings',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+MarketData.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class MarketData extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'symbol',
+        'price',
+        'bid',
+        'ask',
+        'volume',
+        'timestamp',
+    ];
+
+    protected $casts = [
+        'timestamp' => 'datetime',
+    ];
+}
+
+
+
+Order.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Order extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'order_type',
+        'symbol',
+        'volume',
+        'price',
+        'stop_loss',
+        'take_profit',
+        'status',
+        'executed_at',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+
+PersonalCabin.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class PersonalCabin extends Model
+{
+    use HasFactory;
+
+    protected $table = 'personal_cabins';
+    protected $fillable = [
+        'user_id',
+        'phone_number',
+        'layout_preferences',
+        'last_login',
+        'notifications',
+    ];
+
+    protected $casts = [
+        'layout_preferences' => 'array',
+        'notifications' => 'array',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+
+
+
+RiskLog.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class RiskLog extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'type',
+        'details',
+        'alert_triggered',
+    ];
+
+    protected $casts = [
+        'alert_triggered' => 'boolean',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+
+
+Trade.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Trade extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'forex_pair_id',
+        'order_type',
+        'volume',
+        'price_open',
+        'price_close',
+        'stop_loss',
+        'take_profit',
+        'status',
+        'opened_at',
+        'closed_at',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function forexPair()
+    {
+        return $this->belongsTo(ForexPair::class);
+    }
+}
+
+
+
+Transaction.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Transaction extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'wallet_id',
+        'type',
+        'amount',
+        'transaction_date',
+        'status',
+        'reference',
+    ];
+
+    public function wallet()
+    {
+        return $this->belongsTo(Wallet::class);
+    }
+}
+
+
+User.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'email',
+        'password',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    public function wallets()
+    {
+        return $this->hasMany(Wallet::class);
+    }
+
+    public function trades()
+    {
+        return $this->hasMany(Trade::class);
+    }
+
+    public function ib()
+    {
+        return $this->hasOne(IB::class);
+    }
+
+    public function personalCabin()
+    {
+        return $this->hasOne(PersonalCabin::class);
+    }
+
+    public function demoAccounts()
+    {
+        return $this->hasMany(DemoAccount::class);
+    }
+
+    public function copyTradesAsFollower()
+    {
+        return $this->hasMany(CopyTrade::class, 'follower_id');
+    }
+
+    public function copyTradesAsProvider()
+    {
+        return $this->hasMany(CopyTrade::class, 'provider_id');
+    }
+}
+
+
+
+
+
+
+Wallet.php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Wallet extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'balance',
+        'currency',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+}
+
+
+
+i did write the exact controllers in the app/Http/Controllers and put the codes you wrote in them:
+AuthController.php
+BonityController.php
+ForexController.php
+IBController.php
+PersonalCabinController.php
+ProfileController.php
+TradeController.php
+TransactionController.php
+UserController.php
+WalletController.php
+
+I put all migration tables into the migrations:
+2025_04_19_134955_create_compliance_logs_table.php
+2025_04_19_134955_create_copy_trades_table.php
+2025_04_19_134955_create_demo_accounts_table.php
+2025_04_19_134955_create_market_data_table.php
+2025_04_19_134955_create_orders_table.php
+2025_04_19_134955_create_personal_cabins_table.php
+2025_04_19_134955_create_risk_logs_table.php
+2025_04_19_134958_create_ibs_table.php
+2025_04_19_134958_create_trades_table.php
+2025_04_19_134959_create_forex_pairs_table.php
+2025_04_19_134959_create_transactions_table.php
+2025_04_19_134959_create_wallets_table.php
+2025_04_19_135607_create_users_table.php
+
+and I set the api routes:
+<?php
+// routes/api.php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PersonalCabinController;
+use App\Http\Controllers\WalletController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\TradeController;
+use App\Http\Controllers\ForexController;
+use App\Http\Controllers\IBController;
+use App\Http\Controllers\BonityController;
+
+// Public routes
+Route::post('auth/register', [AuthController::class, 'register']);
+Route::post('auth/login',    [AuthController::class, 'login']);
+
+// Routes protected by auth middleware
+Route::middleware('auth:api')->group(function () {
+    // Authentication
+    Route::post('auth/logout',  [AuthController::class, 'logout']);
+    Route::post('auth/refresh', [AuthController::class, 'refresh']);
+
+    // Users
+    Route::apiResource('users', UserController::class)->except(['create','edit']);
+
+    // Profile (Personal Cabin settings)
+    Route::get('profile',       [ProfileController::class, 'show']);
+    Route::put('profile',       [ProfileController::class, 'update']);
+
+    // Personal Cabin Dashboard
+    Route::get('cabin/dashboard', [PersonalCabinController::class, 'dashboard']);
+    Route::put('cabin',           [PersonalCabinController::class, 'update']);
+
+    // Wallets & Transactions
+    Route::apiResource('wallets', WalletController::class)->except(['create','edit']);
+    Route::apiResource('transactions', TransactionController::class)
+         ->only(['index','show','store']);
+
+    // Trades
+    Route::apiResource('trades', TradeController::class)->except(['create','edit']);
+
+    // Forex data
+    Route::get('forex/pairs',         [ForexController::class, 'pairs']);
+    Route::get('forex/quote/{symbol}',[ForexController::class, 'quote']);
+
+    // Introducing Broker (IB)
+    Route::get('ib/{userId}',    [IBController::class, 'show']);
+    Route::put('ib/{userId}',    [IBController::class, 'update']);
+
+    // Credit/Bonnity calculations
+    Route::get('bonity/{userId}', [BonityController::class, 'calculate']);
+});
+
+// Fallback route for unauthenticated access or undefined endpoints
+Route::fallback(function(){
+    return response()->json(['message' => 'Not Found'], 404);
+});
+
