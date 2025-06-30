@@ -1,0 +1,431 @@
+[2024-11-19 05:37:26] local.INFO: User retrieval attempt {"id":"9","user":{"App\\Models\\User":{"id":9,"name":"test9","telegramid":"111119","image":"https://127.0.0.1:8000/storage/profiles/1731967299.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"friends":null,"dailyreward":[1,1,0,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-18 22:02:10","end_last_claim":"2024-11-19 06:02:10","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-18T22:01:39.000000Z","updated_at":"2024-11-19T05:25:53.000000Z"}}} 
+[2024-11-19 05:37:26] local.INFO: Current UTC time {"now":"2024-11-19 05:37:26"} 
+[2024-11-19 05:37:26] local.INFO: Parsed end_last_claim time {"end_last_claim":"2024-11-19 06:02:10"} 
+[2024-11-19 05:37:26] local.INFO: Claim not allowed yet {"now":"2024-11-19 05:37:26","end_last_claim":"2024-11-19 06:02:10"} 
+[2024-11-19 06:03:12] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":9,"name":"test9","telegramid":"111119","image":"https://127.0.0.1:8000/storage/profiles/1731967299.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"friends":null,"dailyreward":[1,1,0,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-18 22:02:10","end_last_claim":"2024-11-19 06:02:10","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-18T22:01:39.000000Z","updated_at":"2024-11-19T05:25:53.000000Z"}}} 
+[2024-11-19 06:03:17] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":9,"name":"test9","telegramid":"111119","image":"https://127.0.0.1:8000/storage/profiles/1731967299.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"friends":null,"dailyreward":[1,1,0,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-18T22:01:39.000000Z","updated_at":"2024-11-19T06:03:12.000000Z"}}} 
+[2024-11-19 06:03:48] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":9,"name":"test9","telegramid":"111119","image":"https://127.0.0.1:8000/storage/profiles/1731967299.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"friends":null,"dailyreward":[1,1,0,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-18T22:01:39.000000Z","updated_at":"2024-11-19T06:03:12.000000Z"}}} 
+[2024-11-19 06:12:48] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":8,"name":"test8","telegramid":"111118","image":"https://127.0.0.1:8000/storage/profiles/1731962412.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"friends":null,"dailyreward":[1,1,0,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-18 15:40:57","end_last_claim":"2024-11-18 23:40:57","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-18T15:40:13.000000Z","updated_at":"2024-11-19T05:25:15.000000Z"}}} 
+[2024-11-19 06:13:51] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":8,"name":"test8","telegramid":"111118","image":"https://127.0.0.1:8000/storage/profiles/1731962412.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"friends":null,"dailyreward":[1,1,0,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-18T15:40:13.000000Z","updated_at":"2024-11-19T06:12:48.000000Z"}}} 
+[2024-11-19 07:06:55] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.inviter_id' in 'where clause' (Connection: mysql, SQL: select `id`, `name`, `telegramid`, `image`, `coin`, `tcoin`, `profit`, `userlevel` from `users` where `users`.`inviter_id` = 9 and `users`.`inviter_id` is not null) {"userId":2,"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.inviter_id' in 'where clause' (Connection: mysql, SQL: select `id`, `name`, `telegramid`, `image`, `coin`, `tcoin`, `profit`, `userlevel` from `users` where `users`.`inviter_id` = 9 and `users`.`inviter_id` is not null) at C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(414): Illuminate\\Database\\Connection->run()
+#2 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2913): Illuminate\\Database\\Connection->select()
+#3 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2902): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3456): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2901): Illuminate\\Database\\Query\\Builder->onceWithColumns()
+#6 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(739): Illuminate\\Database\\Query\\Builder->get()
+#7 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(723): Illuminate\\Database\\Eloquent\\Builder->getModels()
+#8 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(203): Illuminate\\Database\\Eloquent\\Builder->get()
+#9 C:\\Users\\AHMAD\\Desktop\\bb\\app\\Http\\Controllers\\AuthController.php(302): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
+#10 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\AuthController->getInvitedFriends()
+#11 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
+#12 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#13 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#14 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#15 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#16 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#18 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#20 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#21 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#22 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle()
+#24 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#26 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#28 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#30 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#34 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#36 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#37 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#39 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#41 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#43 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#47 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#48 C:\\Users\\AHMAD\\Desktop\\bb\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
+#49 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
+#50 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.inviter_id' in 'where clause' at C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:423)
+[stacktrace]
+#0 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(423): PDO->prepare()
+#1 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(414): Illuminate\\Database\\Connection->run()
+#4 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2913): Illuminate\\Database\\Connection->select()
+#5 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2902): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3456): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2901): Illuminate\\Database\\Query\\Builder->onceWithColumns()
+#8 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(739): Illuminate\\Database\\Query\\Builder->get()
+#9 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(723): Illuminate\\Database\\Eloquent\\Builder->getModels()
+#10 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(203): Illuminate\\Database\\Eloquent\\Builder->get()
+#11 C:\\Users\\AHMAD\\Desktop\\bb\\app\\Http\\Controllers\\AuthController.php(302): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
+#12 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\AuthController->getInvitedFriends()
+#13 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
+#14 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#15 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#16 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#17 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#18 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#20 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#22 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#23 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#24 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle()
+#26 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#28 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#30 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#32 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#33 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#41 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#45 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#47 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#49 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#50 C:\\Users\\AHMAD\\Desktop\\bb\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
+#51 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
+#52 {main}
+"} 
+[2024-11-19 07:07:29] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehist...' at line 1 (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) null, `telegramid` varchar(255) not null, `image` varchar(255) null, `usermoney` decimal(15, 2) not null default '0', `titles` varchar(255) null, `rank` varchar(255) null, `traderank` varchar(255) null, `inviter_id` bigint unsigned null after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehistory` json null, `coin` int not null default '100', `tcoin` int not null default '10000', `profit` decimal(15, 2) not null default '0', `start_last_claim` datetime null, `end_last_claim` datetime null, `como` varchar(255) null, `taskid` int null, `password` varchar(255) null, `userlevel` int not null default '0', `newuser` int not null default '0', `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehist...' at line 1 (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) null, `telegramid` varchar(255) not null, `image` varchar(255) null, `usermoney` decimal(15, 2) not null default '0', `titles` varchar(255) null, `rank` varchar(255) null, `traderank` varchar(255) null, `inviter_id` bigint unsigned null after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehistory` json null, `coin` int not null default '100', `tcoin` int not null default '10000', `profit` decimal(15, 2) not null default '0', `start_last_claim` datetime null, `end_last_claim` datetime null, `como` varchar(255) null, `taskid` int null, `password` varchar(255) null, `userlevel` int not null default '0', `newuser` int not null default '0', `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(576): Illuminate\\Database\\Connection->run()
+#2 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement()
+#3 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build()
+#4 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(456): Illuminate\\Database\\Schema\\Builder->build()
+#5 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create()
+#6 C:\\Users\\AHMAD\\Desktop\\bb\\database\\migrations\\2014_10_12_000000_create_users_table.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#8 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod()
+#9 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#11 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render()
+#13 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write()
+#14 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#15 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#16 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(90): Illuminate\\Database\\Migrations\\Migrator->run()
+#17 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#19 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#22 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#23 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#24 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#25 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#26 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#27 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#28 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand()
+#29 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call()
+#30 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#31 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#32 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#33 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#34 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#35 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#36 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#37 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#38 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run()
+#39 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand()
+#40 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun()
+#41 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#42 C:\\Users\\AHMAD\\Desktop\\bb\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#43 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehist...' at line 1 at C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:581)
+[stacktrace]
+#0 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(581): PDO->prepare()
+#1 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(576): Illuminate\\Database\\Connection->run()
+#4 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement()
+#5 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build()
+#6 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(456): Illuminate\\Database\\Schema\\Builder->build()
+#7 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create()
+#8 C:\\Users\\AHMAD\\Desktop\\bb\\database\\migrations\\2014_10_12_000000_create_users_table.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#9 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#10 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod()
+#11 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#13 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#14 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render()
+#15 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write()
+#16 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#17 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#18 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(90): Illuminate\\Database\\Migrations\\Migrator->run()
+#19 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#20 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#21 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#22 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#24 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#25 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#26 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#27 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#28 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#29 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#30 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand()
+#31 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call()
+#32 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#33 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#34 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#35 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#36 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#37 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#38 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#39 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#40 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run()
+#41 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand()
+#42 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun()
+#43 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#44 C:\\Users\\AHMAD\\Desktop\\bb\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#45 {main}
+"} 
+[2024-11-19 07:07:51] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehist...' at line 1 (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) null, `telegramid` varchar(255) not null, `image` varchar(255) null, `usermoney` decimal(15, 2) not null default '0', `titles` varchar(255) null, `rank` varchar(255) null, `traderank` varchar(255) null, `inviter_id` bigint unsigned null after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehistory` json null, `coin` int not null default '100', `tcoin` int not null default '10000', `profit` decimal(15, 2) not null default '0', `start_last_claim` datetime null, `end_last_claim` datetime null, `como` varchar(255) null, `taskid` int null, `password` varchar(255) null, `userlevel` int not null default '0', `newuser` int not null default '0', `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehist...' at line 1 (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) null, `telegramid` varchar(255) not null, `image` varchar(255) null, `usermoney` decimal(15, 2) not null default '0', `titles` varchar(255) null, `rank` varchar(255) null, `traderank` varchar(255) null, `inviter_id` bigint unsigned null after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehistory` json null, `coin` int not null default '100', `tcoin` int not null default '10000', `profit` decimal(15, 2) not null default '0', `start_last_claim` datetime null, `end_last_claim` datetime null, `como` varchar(255) null, `taskid` int null, `password` varchar(255) null, `userlevel` int not null default '0', `newuser` int not null default '0', `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(576): Illuminate\\Database\\Connection->run()
+#2 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement()
+#3 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build()
+#4 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(456): Illuminate\\Database\\Schema\\Builder->build()
+#5 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create()
+#6 C:\\Users\\AHMAD\\Desktop\\bb\\database\\migrations\\2014_10_12_000000_create_users_table.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#8 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod()
+#9 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#11 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render()
+#13 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write()
+#14 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#15 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#16 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(90): Illuminate\\Database\\Migrations\\Migrator->run()
+#17 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#19 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#22 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#23 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#24 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#25 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#26 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#27 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#28 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand()
+#29 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call()
+#30 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#31 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#32 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#33 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#34 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#35 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#36 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#37 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#38 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run()
+#39 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand()
+#40 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun()
+#41 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#42 C:\\Users\\AHMAD\\Desktop\\bb\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#43 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'after `id`, `dailyreward` json not null default '[0,0,0,0,0,0,0]', `tradehist...' at line 1 at C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:581)
+[stacktrace]
+#0 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(581): PDO->prepare()
+#1 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(576): Illuminate\\Database\\Connection->run()
+#4 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement()
+#5 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build()
+#6 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(456): Illuminate\\Database\\Schema\\Builder->build()
+#7 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create()
+#8 C:\\Users\\AHMAD\\Desktop\\bb\\database\\migrations\\2014_10_12_000000_create_users_table.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#9 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#10 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod()
+#11 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#13 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#14 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render()
+#15 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write()
+#16 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#17 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#18 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(90): Illuminate\\Database\\Migrations\\Migrator->run()
+#19 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#20 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#21 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#22 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#24 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#25 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#26 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#27 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#28 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#29 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#30 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand()
+#31 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call()
+#32 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#33 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#34 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#35 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#36 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#37 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call()
+#38 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute()
+#39 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#40 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run()
+#41 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand()
+#42 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun()
+#43 C:\\Users\\AHMAD\\Desktop\\bb\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#44 C:\\Users\\AHMAD\\Desktop\\bb\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#45 {main}
+"} 
+[2024-11-19 07:10:15] local.INFO: Received image data: {"image":{"Illuminate\\Http\\UploadedFile":"C:\\Users\\AHMAD\\AppData\\Local\\Temp\\phpD4DC.tmp"}} 
+[2024-11-19 07:10:15] local.INFO: Image Data: {"imageData":{"Illuminate\\Http\\UploadedFile":"C:\\Users\\AHMAD\\AppData\\Local\\Temp\\phpD4DC.tmp"}} 
+[2024-11-19 07:10:15] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-19 07:10:15] local.INFO: Generated filename: {"filename":"1732000215.png"} 
+[2024-11-19 07:10:15] local.INFO: File successfully stored at: {"path":"profiles/1732000215.png"} 
+[2024-11-19 07:10:33] local.ERROR: Login attempt failed for user: 111118  
+[2024-11-19 07:10:46] local.INFO: Update function called {"id":"1","request_data":{"newuser":1}} 
+[2024-11-19 07:10:46] local.INFO: Raw input content: {"raw_input":"{\"newuser\":1}"} 
+[2024-11-19 07:10:46] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732000215.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":0,"created_at":"2024-11-19T07:10:15.000000Z","updated_at":"2024-11-19T07:10:15.000000Z"}}} 
+[2024-11-19 07:10:46] local.INFO: Manually retrieved input data: {"data":{"newuser":1}} 
+[2024-11-19 07:10:46] local.INFO: Validation passed {"attributes":{"newuser":1}} 
+[2024-11-19 07:10:46] local.INFO: User update attempted {"user_after_update":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732000215.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T07:10:15.000000Z","updated_at":"2024-11-19T07:10:46.000000Z"}} 
+[2024-11-19 07:10:47] local.INFO: Update function called {"id":"1","request_data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 07:10:47] local.INFO: Raw input content: {"raw_input":"{\"coin\":200,\"dailyreward\":[0,1,0,0,0,0,0]}"} 
+[2024-11-19 07:10:47] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732000215.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T07:10:15.000000Z","updated_at":"2024-11-19T07:10:46.000000Z"}}} 
+[2024-11-19 07:10:47] local.INFO: Manually retrieved input data: {"data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 07:10:47] local.INFO: Validation passed {"attributes":{"dailyreward":[0,1,0,0,0,0,0],"coin":200}} 
+[2024-11-19 07:10:47] local.INFO: User update attempted {"user_after_update":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732000215.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T07:10:15.000000Z","updated_at":"2024-11-19T07:10:47.000000Z"}} 
+[2024-11-19 07:10:50] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732000215.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T07:10:15.000000Z","updated_at":"2024-11-19T07:10:47.000000Z"}}} 
+[2024-11-19 07:13:17] local.INFO: Received image data: {"image":{"Illuminate\\Http\\UploadedFile":"C:\\Users\\AHMAD\\AppData\\Local\\Temp\\php9CC7.tmp"}} 
+[2024-11-19 07:13:17] local.INFO: Image Data: {"imageData":{"Illuminate\\Http\\UploadedFile":"C:\\Users\\AHMAD\\AppData\\Local\\Temp\\php9CC7.tmp"}} 
+[2024-11-19 07:13:17] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-19 07:13:17] local.INFO: Generated filename: {"filename":"1732000397.png"} 
+[2024-11-19 07:13:17] local.INFO: File successfully stored at: {"path":"profiles/1732000397.png"} 
+[2024-11-19 10:57:13] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-19 10:57:13] local.INFO: Generated filename: {"filename":"1732013833.png"} 
+[2024-11-19 10:57:14] local.INFO: File successfully stored at: {"path":"profiles/1732013833.png"} 
+[2024-11-19 11:04:07] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-19 11:04:07] local.INFO: Generated filename: {"filename":"1732014247.png"} 
+[2024-11-19 11:04:07] local.INFO: File successfully stored at: {"path":"profiles/1732014247.png"} 
+[2024-11-19 11:14:37] local.INFO: Update function called {"id":"1","request_data":{"newuser":1}} 
+[2024-11-19 11:14:37] local.INFO: Raw input content: {"raw_input":"{\"newuser\":1}"} 
+[2024-11-19 11:14:37] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":0,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-19T11:04:07.000000Z"}}} 
+[2024-11-19 11:14:37] local.INFO: Manually retrieved input data: {"data":{"newuser":1}} 
+[2024-11-19 11:14:38] local.INFO: Validation passed {"attributes":{"newuser":1}} 
+[2024-11-19 11:14:38] local.INFO: User update attempted {"user_after_update":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-19T11:14:38.000000Z"}} 
+[2024-11-19 11:14:39] local.INFO: Update function called {"id":"1","request_data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 11:14:39] local.INFO: Raw input content: {"raw_input":"{\"coin\":200,\"dailyreward\":[0,1,0,0,0,0,0]}"} 
+[2024-11-19 11:14:39] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-19T11:14:38.000000Z"}}} 
+[2024-11-19 11:14:39] local.INFO: Manually retrieved input data: {"data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 11:14:39] local.INFO: Validation passed {"attributes":{"dailyreward":[0,1,0,0,0,0,0],"coin":200}} 
+[2024-11-19 11:14:39] local.INFO: User update attempted {"user_after_update":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-19T11:14:39.000000Z"}} 
+[2024-11-19 11:14:42] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-19T11:14:39.000000Z"}}} 
+[2024-11-19 17:02:28] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-19 17:02:28] local.INFO: Generated filename: {"filename":"1732035748.png"} 
+[2024-11-19 17:02:28] local.INFO: File successfully stored at: {"path":"profiles/1732035748.png"} 
+[2024-11-19 17:12:51] local.INFO: Update function called {"id":"2","request_data":{"newuser":1}} 
+[2024-11-19 17:12:51] local.INFO: Raw input content: {"raw_input":"{\"newuser\":1}"} 
+[2024-11-19 17:12:51] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":2,"name":"test2","telegramid":"111112","image":"https://127.0.0.1:8000/storage/profiles/1732035748.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":0,"created_at":"2024-11-19T17:02:28.000000Z","updated_at":"2024-11-19T17:02:28.000000Z"}}} 
+[2024-11-19 17:12:51] local.INFO: Manually retrieved input data: {"data":{"newuser":1}} 
+[2024-11-19 17:12:51] local.INFO: Validation passed {"attributes":{"newuser":1}} 
+[2024-11-19 17:12:51] local.INFO: User update attempted {"user_after_update":{"id":2,"name":"test2","telegramid":"111112","image":"https://127.0.0.1:8000/storage/profiles/1732035748.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:02:28.000000Z","updated_at":"2024-11-19T17:12:51.000000Z"}} 
+[2024-11-19 17:40:38] local.INFO: Update function called {"id":"2","request_data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 17:40:38] local.INFO: Raw input content: {"raw_input":"{\"coin\":200,\"dailyreward\":[0,1,0,0,0,0,0]}"} 
+[2024-11-19 17:40:38] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":2,"name":"test2","telegramid":"111112","image":"https://127.0.0.1:8000/storage/profiles/1732035748.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:02:28.000000Z","updated_at":"2024-11-19T17:12:51.000000Z"}}} 
+[2024-11-19 17:40:38] local.INFO: Manually retrieved input data: {"data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 17:40:38] local.INFO: Validation passed {"attributes":{"dailyreward":[0,1,0,0,0,0,0],"coin":200}} 
+[2024-11-19 17:40:38] local.INFO: User update attempted {"user_after_update":{"id":2,"name":"test2","telegramid":"111112","image":"https://127.0.0.1:8000/storage/profiles/1732035748.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:02:28.000000Z","updated_at":"2024-11-19T17:40:38.000000Z"}} 
+[2024-11-19 17:40:45] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":2,"name":"test2","telegramid":"111112","image":"https://127.0.0.1:8000/storage/profiles/1732035748.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:02:28.000000Z","updated_at":"2024-11-19T17:40:38.000000Z"}}} 
+[2024-11-19 17:57:56] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-19 17:57:56] local.INFO: Generated filename: {"filename":"1732039076.png"} 
+[2024-11-19 17:57:56] local.INFO: File successfully stored at: {"path":"profiles/1732039076.png"} 
+[2024-11-19 17:58:15] local.INFO: Update function called {"id":"3","request_data":{"newuser":1}} 
+[2024-11-19 17:58:15] local.INFO: Raw input content: {"raw_input":"{\"newuser\":1}"} 
+[2024-11-19 17:58:15] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":3,"name":"test3","telegramid":"111113","image":"https://127.0.0.1:8000/storage/profiles/1732039076.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":0,"created_at":"2024-11-19T17:57:56.000000Z","updated_at":"2024-11-19T17:57:56.000000Z"}}} 
+[2024-11-19 17:58:15] local.INFO: Manually retrieved input data: {"data":{"newuser":1}} 
+[2024-11-19 17:58:15] local.INFO: Validation passed {"attributes":{"newuser":1}} 
+[2024-11-19 17:58:15] local.INFO: User update attempted {"user_after_update":{"id":3,"name":"test3","telegramid":"111113","image":"https://127.0.0.1:8000/storage/profiles/1732039076.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:57:56.000000Z","updated_at":"2024-11-19T17:58:15.000000Z"}} 
+[2024-11-19 17:58:17] local.INFO: Update function called {"id":"3","request_data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 17:58:17] local.INFO: Raw input content: {"raw_input":"{\"coin\":200,\"dailyreward\":[0,1,0,0,0,0,0]}"} 
+[2024-11-19 17:58:17] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":3,"name":"test3","telegramid":"111113","image":"https://127.0.0.1:8000/storage/profiles/1732039076.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,0,0,0,0,0,0],"tradehistory":null,"coin":100,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:57:56.000000Z","updated_at":"2024-11-19T17:58:15.000000Z"}}} 
+[2024-11-19 17:58:17] local.INFO: Manually retrieved input data: {"data":{"coin":200,"dailyreward":[0,1,0,0,0,0,0]}} 
+[2024-11-19 17:58:17] local.INFO: Validation passed {"attributes":{"dailyreward":[0,1,0,0,0,0,0],"coin":200}} 
+[2024-11-19 17:58:17] local.INFO: User update attempted {"user_after_update":{"id":3,"name":"test3","telegramid":"111113","image":"https://127.0.0.1:8000/storage/profiles/1732039076.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:57:56.000000Z","updated_at":"2024-11-19T17:58:17.000000Z"}} 
+[2024-11-19 17:58:19] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":3,"name":"test3","telegramid":"111113","image":"https://127.0.0.1:8000/storage/profiles/1732039076.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T17:57:56.000000Z","updated_at":"2024-11-19T17:58:17.000000Z"}}} 
+[2024-11-20 12:45:30] local.INFO: Update function called {"id":"1","request_data":{"coin":300,"dailyreward":[0,1,1,0,0,0,0]}} 
+[2024-11-20 12:45:30] local.INFO: Raw input content: {"raw_input":"{\"coin\":300,\"dailyreward\":[0,1,1,0,0,0,0]}"} 
+[2024-11-20 12:45:30] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,0,0,0,0,0],"tradehistory":null,"coin":200,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-19 11:14:42","end_last_claim":"2024-11-19 19:14:42","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-19T11:14:42.000000Z"}}} 
+[2024-11-20 12:45:30] local.INFO: Manually retrieved input data: {"data":{"coin":300,"dailyreward":[0,1,1,0,0,0,0]}} 
+[2024-11-20 12:45:31] local.INFO: Validation passed {"attributes":{"dailyreward":[0,1,1,0,0,0,0],"coin":300}} 
+[2024-11-20 12:45:31] local.INFO: User update attempted {"user_after_update":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-19 11:14:42","end_last_claim":"2024-11-19 19:14:42","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-20T12:45:31.000000Z"}} 
+[2024-11-20 12:45:35] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-19 11:14:42","end_last_claim":"2024-11-19 19:14:42","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-20T12:45:31.000000Z"}}} 
+[2024-11-20 12:45:44] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-20T12:45:35.000000Z"}}} 
+[2024-11-20 19:19:59] local.ERROR: Login attempt failed for user: 123456789  
+[2024-11-21 02:23:26] local.ERROR: No image found  
+[2024-11-21 03:15:03] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:15:04] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:15:25] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:15:32] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:15:45] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:18:04] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:19:25] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:26:20] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:26:24] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:26:31] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:26:37] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:26:43] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:26:47] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:27:25] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:27:29] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 03:27:38] local.ERROR: Login attempt failed for user: 789840850  
+[2024-11-21 17:02:53] local.INFO: Uploaded file details: {"filename":"test.png","mime":"image/webp","size":90584} 
+[2024-11-21 17:02:53] local.INFO: Generated filename: {"filename":"1732208573.png"} 
+[2024-11-21 17:02:54] local.INFO: File successfully stored at: {"path":"profiles/1732208573.png"} 
+[2024-11-21 17:03:11] local.INFO: Update function called {"id":"1","request_data":{"coin":400,"dailyreward":[0,1,1,1,0,0,0]}} 
+[2024-11-21 17:03:11] local.INFO: Raw input content: {"raw_input":"{\"coin\":400,\"dailyreward\":[0,1,1,1,0,0,0]}"} 
+[2024-11-21 17:03:11] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,0,0,0,0],"tradehistory":null,"coin":300,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-20 12:45:44","end_last_claim":"2024-11-20 20:45:44","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-20T12:45:44.000000Z"}}} 
+[2024-11-21 17:03:11] local.INFO: Manually retrieved input data: {"data":{"coin":400,"dailyreward":[0,1,1,1,0,0,0]}} 
+[2024-11-21 17:03:11] local.INFO: Validation passed {"attributes":{"dailyreward":[0,1,1,1,0,0,0],"coin":400}} 
+[2024-11-21 17:03:11] local.INFO: User update attempted {"user_after_update":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,1,0,0,0],"tradehistory":null,"coin":400,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-20 12:45:44","end_last_claim":"2024-11-20 20:45:44","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-21T17:03:11.000000Z"}} 
+[2024-11-21 17:03:27] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,1,0,0,0],"tradehistory":null,"coin":400,"tcoin":10000,"profit":"0.00","start_last_claim":"2024-11-20 12:45:44","end_last_claim":"2024-11-20 20:45:44","como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-21T17:03:11.000000Z"}}} 
+[2024-11-21 17:03:33] local.INFO: User retrieved {"user":{"App\\Models\\User":{"id":1,"name":"test1","telegramid":"111111","image":"https://127.0.0.1:8000/storage/profiles/1732014247.png","usermoney":"0.00","titles":null,"rank":null,"traderank":null,"inviter_id":null,"dailyreward":[0,1,1,1,0,0,0],"tradehistory":null,"coin":400,"tcoin":10000,"profit":"0.00","start_last_claim":null,"end_last_claim":null,"como":null,"taskid":null,"userlevel":0,"newuser":1,"created_at":"2024-11-19T11:04:07.000000Z","updated_at":"2024-11-21T17:03:27.000000Z"}}} 
+[2024-11-21 17:04:00] local.INFO: Order 1 processed for user 1.  
+[2024-11-21 17:04:05] local.INFO: Order 2 processed for user 1.  
+[2024-11-21 19:37:25] local.INFO: Uploaded file details: {"filename":"FinancialMarkets.png","mime":"image/png","size":542443} 
+[2024-11-21 19:37:25] local.INFO: Generated filename: {"filename":"1732217845.png"} 
+[2024-11-21 19:37:25] local.INFO: File successfully stored at: {"path":"profiles/1732217845.png"} 
+[2024-11-21 19:38:19] local.INFO: Uploaded file details: {"filename":"FinancialMarkets.png","mime":"image/png","size":542443} 
+[2024-11-21 19:38:19] local.INFO: Generated filename: {"filename":"1732217899.png"} 
+[2024-11-21 19:38:19] local.INFO: File successfully stored at: {"path":"profiles/1732217899.png"} 
